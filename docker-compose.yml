@@ -1,15 +1,14 @@
 version: '3'
 services:
-  postgres:
-    container_name: Django4ByExamples_postgres_container
+  mysite:
+    container_name: Django4ByExamples_mysite_container
     image: postgres:15
     volumes:
-      - postgres_data:/var/lib/postgresql/data/
+      -   mysite_data:/var/lib/postgresql/data/
     env_file:
-      - .env
+      - .env.mysite
     ports:
       - "5432:5432"
-    restart: unless-stopped
     deploy:
       resources:
         limits:
@@ -17,4 +16,4 @@ services:
           memory: 4G
 
 volumes:
-  postgres_data:
+  mysite_data:
