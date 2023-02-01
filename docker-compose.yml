@@ -15,5 +15,21 @@ services:
           cpus: '1'
           memory: 4G
 
+  bookmarks:
+    container_name: Django4ByExamples_bookmarks_container
+    image: postgres:15
+    volumes:
+      - bookmarks_data:/var/lib/postgresql/data/
+    env_file:
+      - .env.bookmarks
+    ports:
+      - "5432:5432"
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 4G
+
 volumes:
   mysite_data:
+  bookmarks_data:
