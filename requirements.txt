@@ -5,3 +5,6 @@ Markdown==3.4.1
 psycopg2-binary==2.9.5
 Pillow==9.4.0
 git+https://github.com/python-social-auth/social-app-django.git@a5f470a06368f5cabb0fdcd593c613952b74f79d
+django-extensions==3.2.1
+Werkzeug==2.2.2
+pyOpenSSL==23.0.0
